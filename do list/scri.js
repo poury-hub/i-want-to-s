@@ -17,14 +17,14 @@ addboy.onclick = function(){
     n.className="cun"
     let sub = document.createElement('td');
     sub.textContent = thing;
-    let d = document.createElement('td')
-    let b = document.createElement('button');
-    b.textContent="Delete"
-    d.append(b);
+    let delet = document.createElement('td')
+    let delbutton = document.createElement('button');
+    delbutton.textContent="Delete"
+    delet.append(delbutton);
 
     t.append(n);
     t.append(sub);
-    t.append(d);
+    t.append(delet);
     let tbody = document.getElementById('bod')
     let addtr = document.getElementById('addtr')
     //tbody.append(t);
@@ -32,7 +32,7 @@ addboy.onclick = function(){
 
     let allcuns = document.getElementsByClassName("cun");
 
-    b.onclick = function() {
+    delbutton.onclick = function() {
         if(confirm("are you sure?")){
             let ind = t.rowIndex - 1;
             console.log(ind);
@@ -46,6 +46,7 @@ addboy.onclick = function(){
     }
 }
 test.onclick = imgadder;
+
 let table = document.getElementById('listy');
 function imgadder(){
     img = document.createElement('img');
